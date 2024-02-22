@@ -1,0 +1,583 @@
+:root
+{
+    --bs-border-radius: 15px;
+}
+
+.cantarell-regular 
+{
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.cantarell-bold {
+font-family: "Cantarell", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+  
+.cantarell-regular-italic 
+{
+font-family: "Cantarell", sans-serif;
+font-weight: 400;
+font-style: italic;
+}
+
+.cantarell-bold-italic 
+{
+font-family: "Cantarell", sans-serif;
+font-weight: 700;
+font-style: italic;
+}
+
+*
+{
+    font-family: "Cantarell", sans-serif;
+}
+
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+
+body
+{
+    padding-top: 75px;
+    padding-bottom: 0px;
+    margin-bottom: 445px;
+}
+
+@media (min-width: 768px)
+{
+    body
+    {
+        margin-bottom: 345px;
+    }   
+}
+
+[data-bs-theme=dark] > body 
+{
+    background-color: #1b1b1b;
+}
+
+.bg-dark 
+{
+    background-color: #000000!important;
+}
+
+.navbar
+{
+    height: 75px;
+    border-bottom: 1px solid #ADADAD;
+    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 10%);
+}
+
+@media (min-width: 768px) 
+{
+    .navbar
+    {
+        padding-left: 144px;
+        padding-right: 144px;
+    }
+
+}
+@media (max-width: 767px) 
+{
+    .nav-item
+    {
+        background-color: #FFFFFF;
+        padding: 4px 8px;
+        border-radius: 15px;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        border: 1px solid rgb(0 0 0 / 10%);
+        box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 10%);
+    }
+    [data-bs-theme=dark] .nav-item
+    {
+        background-color: #000000;
+        color: white;
+        border: 1px solid transparent;
+        box-shadow: 0px 4px 4px 0px rgb(255 255 255 / 10%);
+    }
+
+}
+
+#text-dark-mode
+{
+    font-size: 20px;
+}
+
+.navbar-brand
+{
+    margin-right: 65px;
+}
+
+.nav-link
+{
+    font-size: 20px;
+    color: #000000;
+}
+
+[data-bs-theme=dark] .nav-link
+{
+    color: #FFFFFF;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .nav-link.active, .nav-link.show
+{
+    color: #1984A6;
+}
+
+.card .nav-link.active
+{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+[data-bs-theme=dark] .navbar-nav .nav-link.active, [data-bs-theme=dark] .navbar-nav .nav-link.show, [data-bs-theme=dark] .nav-link.active, [data-bs-theme=dark] .nav-link.show
+{
+    color: #b5edff;
+}
+
+@media (min-width: 768px)
+{
+    .navbar-expand-md .navbar-nav .nav-link
+    {
+        padding-left: 0px;
+        padding-right: 55px;
+    }
+}
+
+[data-bs-theme=dark] > .navbar
+{
+    border-bottom: 1px solid #000000;
+    box-shadow: none;
+}
+
+.carousel-indicators
+{
+    bottom: 75px;
+}
+
+.carousel-indicators [data-bs-target]
+{
+    width: 10px;
+    height: 10px;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 360px;
+    opacity: 1;
+    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+}
+
+.carousel-indicators .active
+{
+    width: 30px;
+    background-color: #b5edff;
+    border-radius: 15px;
+}
+
+.carousel-item
+{
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* object-fit: cover;
+    object-position: 100% 35%; */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon
+{
+    background-color: #000000;
+    filter: invert(1);
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    border-radius: 360px;
+    background-origin: content-box;
+    box-shadow: 0px 4px 4px 0px rgb(255 255 255 / 25%);
+}
+
+[data-bs-theme=dark] .carousel .carousel-control-prev-icon, [data-bs-theme=dark] .carousel .carousel-control-next-icon
+{
+    filter: invert(0);
+}
+
+.carousel-control-prev, .carousel-control-next
+{
+    opacity: 1;
+}
+
+[data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target] 
+{
+    border: 1px solid #FFFF;
+}
+
+[data-bs-theme=dark] .carousel .carousel-indicators .active
+{
+    border: none;
+    background-color: #1984A6;
+}
+
+@media (min-width: 900px)
+{
+    .card-jual-beli-mobil
+    {
+        width: 900px;
+    }
+}
+
+.card-jual-beli-mobil
+{
+    width: 100%;
+}
+
+.container.marketing > .card
+{
+    box-shadow: 0px 4px 4px 0px rgb(0 0 0 / 10%);
+}
+
+[data-bs-theme=dark] .container.marketing > .card
+{
+    box-shadow: 0px 4px 4px 0px rgb(255 255 255 / 10%);
+}
+
+[data-bs-theme=dark] .card
+{
+    background-color: #000000;
+}
+
+[data-bs-theme=dark] .btn-outline-secondary
+{
+    background-color: #414141;
+    color: #ADADAD;
+}
+
+[data-bs-theme=dark] .form-control
+{
+    background-color: #414141;
+    color: #ADADAD;
+}
+
+h5
+{
+    color: #1984A6;
+    font-weight: bold;
+}
+
+.accordion-body
+{
+    padding-top: 0px;
+}
+
+
+
+.accordion-button::after {
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231984a6'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231984a6'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+[data-bs-theme=dark] .accordion-button::after {
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b5edff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23b5edff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button
+{
+    font-weight: bold;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #1984A6;
+    background-color: var(--bs-accordion-bg);
+    box-shadow: none;
+}
+
+[data-bs-theme=dark] .accordion-button:not(.collapsed)
+{
+    color: #b5edff;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.daftar-mobil
+{
+    width: 100%;
+}
+
+@media (min-width: 940px)
+{
+    .daftar-mobil
+    {
+        width: 920px;
+    }
+}
+
+footer.container
+{
+    max-width: none;
+    position: absolute;
+    bottom: 0px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 22px;
+    padding-bottom: 48px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+@media (min-width: 768px)
+{
+    footer.container
+    {
+        padding-left: 144px;
+        padding-right: 144px;
+        height: 300px;
+    }
+}
+
+.logo-ig, .logo-wa, .logo-tiktok
+{
+    display: inline-block;
+    margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.logo-wa, .logo-tiktok
+{
+    margin-left: 25px;
+}
+
+.text-accent
+{
+    color: #1984A6;
+}
+
+[data-bs-theme=dark] .text-accent
+{
+    color: #b5edff;
+}
+
+.text-accent-light
+{
+    color: #b5edff;
+}
+
+.text-accent-dark
+{
+    color: #1984A6;
+}
+
+.nav-car
+{
+    cursor: pointer;
+    user-select: none;
+    border-color: #ADADAD;
+}
+
+[data-bs-theme=dark] .nav-car
+{
+    border-color: transparent;
+}
+
+.nav-car *
+{
+    color: #000000;
+    user-select: none;
+}
+
+[data-bs-theme=dark] .nav-car *
+{
+    color: #FFFFFF;
+}
+
+.nav-car.car-on
+{
+    border-color: #1984A6;
+}
+
+[data-bs-theme=dark] .nav-car.car-on
+{
+    border-color: transparent;
+}
+
+.nav-car.car-on *
+{
+    color: #1984A6;
+}
+
+[data-bs-theme=dark] .nav-car.car-on *
+{
+    color: #b5edff;
+}
+
+.button-accent
+{
+    height: 50px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #1984A6 !important;
+}
+
+[data-bs-theme=dark] .button-accent
+{
+    color: #000000;
+    background-color: #b5edff !important;
+}
+
+.card-light-grey-accent
+{
+    background-color: #F1F1F1 !important;
+}
+
+[data-bs-theme=dark] .card-light-grey-accent
+{
+    background-color: #1b1b1b !important;
+}
+
+.car .card
+{
+    user-select: none;
+    cursor: pointer;
+}
+
+.carousel-thumb .active
+{
+    border: 2px solid transparent;
+}
+
+.carousel-thumb .active
+{
+    border: 2px solid #007BA2;
+}
+
+.carousel-thumb [data-bs-target]
+{
+    text-indent: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: transparent;
+}
+
+.carousel .carousel-indicators.carousel-thumb
+{
+    background-color: transparent!important;
+}
+
+[data-bs-theme=dark] .carousel .carousel-indicators.carousel-thumb,
+[data-bs-theme=dark].carousel .carousel-indicators.carousel-thumb
+{
+    background-color: transparent!important;
+}
+
+[data-bs-theme=dark] .carousel .carousel-indicators.carousel-thumb [data-bs-target],
+[data-bs-theme=dark].carousel .carousel-indicators.carousel-thumb [data-bs-target]
+{
+    background-color: transparent!important;
+}
+
+.daftar-mobil
+{
+    width: 100%;
+}
+
+@media (min-width: 900px)
+{
+    .daftar-mobil
+    {
+        width: 900px;
+    }
+}
+
+.faq
+{
+    width: 95%;
+}
+
+@media (min-width: 900px)
+{
+    .faq
+    {
+        width: 900px;
+    }
+}
+
+.tentang
+{
+    width: 95%;
+}
+
+@media (min-width: 1152px)
+{
+    .tentang
+    {
+        width: 1152px;
+    }
+}
+
+.tentang-siapa
+{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 700px)
+{
+    .tentang-siapa
+    {
+        width: 700px;
+    }
+}
+
+.card-jual-beli-mobil
+{
+    width: 95%;
+}
+
+@media (min-width: 900px)
+{
+    .card-jual-beli-mobil
+    {
+        width: 900px;
+    }
+}
+
+.beranda
+{
+    width: 95%;
+}
+
+@media (min-width:900px)
+{
+    .beranda
+    {
+        width: 900px;
+    }
+}
+
+.detail-produk
+{
+    width: 95%;
+}
+
+@media (min-width:1150px)
+{
+    .detail-produk
+    {
+        width: 1150px;
+    }
+}

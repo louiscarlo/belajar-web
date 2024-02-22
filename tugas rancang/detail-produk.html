@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <script src="../assets/js/color-modes.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.118.2">
+        <title>Berkah Motor Salatiga</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+        
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+        <link rel="icon" href="img/logo-berkah-motor.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+        </style>
+    <!-- Custom styles for this template -->
+        <link href="css/carousel.css" rel="stylesheet">
+        <link href="css/berkah-motor.css" rel="stylesheet">
+    </head>
+    <body onload="cekDarkMode(); cekMobil();">
+        <div xmlns="http://www.w3.org/2000/div" class="d-none">
+            <symbol id="check2" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+            </symbol>
+            <symbol id="circle-half" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+            </symbol>
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+            </symbol>
+            <symbol id="sun-fill" viewBox="0 0 16 16">
+                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+            </symbol>
+        </div>
+
+        <header data-bs-theme="light">
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+                <div class="container-fluid">
+                    <a id="link_beranda" class="navbar-brand" href="index.html">
+                        <img src="img/logo-atas.png" width="60px"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a id="link_beli_mobil" class="nav-link active" aria-current="page" href="beli-mobil.html">Beli Mobil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="link_jual_mobil" class="nav-link" href="jual-mobil.html">Jual Mobil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="link_faq" class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="link_tentang_kami" class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+                            </li>
+                        </ul>
+                        <div class="nav-item" onclick="switchDarkLightMode();" style="cursor: pointer;">
+                            <svg id="dark-light" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24"><path fill="currentColor" d="M12.058 20q-3.334 0-5.667-2.333Q4.058 15.333 4.058 12q0-3.038 1.98-5.27Q8.02 4.5 10.942 4.097q.081 0 .159.006t.153.017q-.506.706-.801 1.57q-.295.865-.295 1.811q0 2.667 1.866 4.533q1.867 1.867 4.534 1.867q.952 0 1.813-.295q.862-.295 1.548-.801q.012.075.018.153q.005.078.005.158q-.384 2.923-2.615 4.904T12.057 20"/></svg>
+                            <span id="text-dark-mode" class=" d-sm-block d-md-none">Dark Mode: OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="row detail-produk" style="margin-left: auto; margin-right: auto; margin-top: 75px;">
+                <div class="col-12 col-md">
+                    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" style="width: 660px; margin-bottom: 150px;">
+                        <div class="carousel-indicators carousel-thumb" style="margin-bottom: 0px; bottom: -105px;">
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"  style="height: 75px; width: auto; border-radius: 15px; margin-left: 0px; margin-right: 6px;">
+                                <img id="carousel-switch-0" src="img/mobil-1/1.jpg" style="height: 75px; width: 100px; border-radius: 15px; object-fit: cover;" width="100%"/>
+                            </button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"  style="height: 75px; width: auto; border-radius: 15px; margin-left: 6px; margin-right: 6px;">
+                                <img id="carousel-switch-1" src="img/cek-unit.jpg" style="height: 75px; width: 100px; border-radius: 15px; object-fit: cover;" width="100%"/>
+                            </button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"  style="height: 75px; width: auto; border-radius: 15px; margin-left: 6px; margin-right: 6px;">
+                                <img id="carousel-switch-2" src="img/jadwal.jpg" style="height: 75px; width: 100px; border-radius: 15px; object-fit: cover;" width="100%"/>
+                            </button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"  style="height: 75px; width: auto; border-radius: 15px; margin-left: 6px; margin-right: 6px;">
+                                <img id="carousel-switch-3" src="img/mazda.jpg" style="height: 75px; width: 100px; border-radius: 15px; object-fit: cover;" width="100%"/>
+                            </button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"  style="height: 75px; width: auto; border-radius: 15px; margin-left: 6px; margin-right: 6px;">
+                                <img id="carousel-switch-4" src="img/spidometer.jpg" style="height: 75px; width: 100px; border-radius: 15px; object-fit: cover;" width="100%"/>
+                            </button>
+                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"  style="height: 75px; width: auto; border-radius: 15px; margin-left: 6px; margin-right: 0px;">
+                                <img id="carousel-switch-5" src="img/kursi-mobil.jpg" style="height: 75px; width: 100px; border-radius: 15px; object-fit: cover;" width="100%"/>
+                            </button>
+                        </div>
+                        <div class="carousel-inner" style="width: 660px; height: 360px; border-radius: 15px;">
+                            <div id="carousel-preview-0" class="carousel-item active" style="width: 660px; height: 360px; background-image: url(img/cek-unit.jpg);">
+                            </div>
+                            <div id="carousel-preview-1" class="carousel-item" style="width: 660px; height: 360px; background-image: url(img/deal2.jpg);">
+                            </div>
+                            <div id="carousel-preview-2" class="carousel-item" style="width: 660px; height: 360px; background-image: url(img/jadwal.jpg);">
+                            </div>
+                            <div id="carousel-preview-3" class="carousel-item" style="width: 660px; height: 360px; background-image: url(img/kursi-mobil.jpg);">
+                            </div>
+                            <div id="carousel-preview-4" class="carousel-item" style="width: 660px; height: 360px; background-image: url(img/logo-atas.png);">
+                            </div>
+                            <div id="carousel-preview-5" class="carousel-item" style="width: 660px; height: 360px; background-image: url(img/mazda.jpg);">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-0 mt-md-3">
+                    <div class="card" style="height: auto;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 id="text-nama-mobil" class="card-title" style="font-weight: normal; font-size: 20px;">Fortuner GR Sport | 2022</h5>
+                            <span id="text-jarak-tempuh" class="card-text" style="font-size: 16px; color: #666666;">5.000 Km | Automatic</span>
+                            <span id="text-pajak-atas" class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span id="text-harga" class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 550.000.000</span>
+                        </div>
+                    </div>
+                    <div class="card card-shadow button-accent" style="width: 100%; margin-top: 25px;">
+                        <p style="display: flex; margin-top: auto; margin-bottom: auto; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="margin-right: 10px;"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/></svg>
+                            Saya Tertarik
+                        </p>
+                    </div>
+                    <div class="card" style="height: auto;  margin-top: 25px;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">Spesifikasi Lengkap</h5>
+                            <div class="row">
+                                <div class="col-4">
+                                    <span id="text-bahan-bakar" class="card-text" style="font-size: 16px; color: #666666;">Bahan Bakar</span>
+                                </div>
+                                <div class="col-8">
+                                    <span id="text-keterangan-bahan-bakar" class="card-text text-accent" style="font-size: 16px;">Solar</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4"><span id="text-pajak-bawah" class="card-text" style="font-size: 16px; color: #666666;">Pajak</span></div>
+                                <div class="col-8">
+                                    <span id="text-pajak-on" class="card-text text-accent" style="font-size: 16px;">ON</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4"><span id="text-surat-surat" class="card-text" style="font-size: 16px; color: #666666;">Surat-Surat</span></div>
+                                <div class="col-8">
+                                    <span id="text-surat-surat-lengkap" class="card-text text-accent" style="font-size: 16px;">Lengkap</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4"><span id="text-jaminan" class="card-text" style="font-size: 16px; color: #666666;">Jaminan</span></div>
+                                <div class="col-8">
+                                    <span id="text-unit-terawat" class="card-text text-accent" style="font-size: 16px;">Unit Terawat & Siap Pakai</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+        <footer class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="img/logo.png" width="223px">
+                    <p class="mb-0" style="margin-top: 8px;">
+                        Jual Beli Mobil Second Cash & Kredit <br/>
+                        JL. JENDRAL SUDIRMAN NO 399 <br/>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="float-start float-md-end mb-0 text-start text-md-center mt-3 mt-md-0" style="height: 100%; display: flex; align-items: flex-end;">
+                        <span class="text-accent-light" style="font-size: 25px;">
+                            Kunjungi Media Kami
+                            <br/>
+                            <a class="logo-ig" href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="2 2 20 20"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>
+                            <a class="logo-wa" href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="2 2 20 20"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/></svg>
+                            </a>
+                            <a class="logo-tiktok" href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52px" height="64px" viewBox="4.3 2 16 20"><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+<!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/berkah-motor.js"></script>
+    </body>
+</html>

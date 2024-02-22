@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <script src="../assets/js/color-modes.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.118.2">
+        <title>Berkah Motor Salatiga</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+        
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+        <link rel="icon" href="img/logo-berkah-motor.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            width: 100%;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8;
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+        </style>
+    <!-- Custom styles for this template -->
+        <link href="css/carousel.css" rel="stylesheet">
+        <link href="css/berkah-motor.css" rel="stylesheet">
+    </head>
+    <body onload="cekDarkMode();">
+        <div xmlns="http://www.w3.org/2000/div" class="d-none">
+            <symbol id="check2" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+            </symbol>
+            <symbol id="circle-half" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+            </symbol>
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+            </symbol>
+            <symbol id="sun-fill" viewBox="0 0 16 16">
+                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+            </symbol>
+        </div>
+
+        <header data-bs-theme="light">
+            <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+                <div class="container-fluid">
+                    <a id="link_beranda" class="navbar-brand" href="index.html">
+                        <img src="img/logo-atas.png" width="60px"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a id="link_beli_mobil" class="nav-link active" aria-current="page" href="beli-mobil.html">Beli Mobil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="link_jual_mobil" class="nav-link" href="jual-mobil.html">Jual Mobil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="link_faq" class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="link_tentang_kami" class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+                            </li>
+                        </ul>
+                        <div class="nav-item" onclick="switchDarkLightMode();" style="cursor: pointer;">
+                            <svg id="dark-light" style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24"><path fill="currentColor" d="M12.058 20q-3.334 0-5.667-2.333Q4.058 15.333 4.058 12q0-3.038 1.98-5.27Q8.02 4.5 10.942 4.097q.081 0 .159.006t.153.017q-.506.706-.801 1.57q-.295.865-.295 1.811q0 2.667 1.866 4.533q1.867 1.867 4.534 1.867q.952 0 1.813-.295q.862-.295 1.548-.801q.012.075.018.153q.005.078.005.158q-.384 2.923-2.615 4.904T12.057 20"/></svg>
+                            <span id="text-dark-mode" class=" d-sm-block d-md-none">Dark Mode: OFF</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="input-group flex-nowrap" style="height: 50px; width: 900px; margin-left: auto; margin-right: auto; margin-top: 20px;">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon1" style="border-right: none; --bs-btn-border-color: var(--bs-border-color-translucent);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5"/></svg>
+                </button>
+                <input type="text" class="form-control p-0" placeholder="Cari mobil menurut merek, model atau tahun" aria-label="Username" aria-describedby="addon-wrapping" style="border-left: none; font-size: 20px;"/>
+            </div>
+            <div class="card-jual-beli-mobil" style="overflow-x: auto; margin-top: 20px; margin-left: auto; margin-right: auto; padding-left: 12px; padding-right: 12px;">
+                <div class="row" style="width: 900px;">
+                    <div class="col-2" style="padding-left: 0px; padding-right: 10px;">
+                        <div class="card nav-car nav-car-toyota" onclick="filterDaftarMobil('car-toyota');">
+                            <div class="card-body p-0 d-flex" style="flex-direction: column;">
+                                <svg style="margin-top: 5px; margin-left: auto; margin-right: auto;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3.848C5.223 3.848 0 7.298 0 12c0 4.702 5.224 8.152 12 8.152S24 16.702 24 12c0-4.702-5.223-8.152-12-8.152m7.334 3.839c0 1.08-1.725 1.913-4.488 2.246c-.26-2.58-1.005-4.279-1.963-4.913c2.948.184 6.45 1.227 6.45 2.667zM12 16.401c-.96 0-1.746-1.5-1.808-4.389c.577.047 1.18.072 1.808.072c.628 0 1.23-.025 1.807-.072c-.061 2.89-.847 4.389-1.807 4.389m0-6.308c-.59 0-1.155-.019-1.69-.054c.261-1.728.92-3.15 1.69-3.15c.77 0 1.428 1.422 1.689 3.15c-.535.034-1.099.054-1.689.054m-.882-5.075c-.956.633-1.706 2.333-1.964 4.915C6.391 9.6 4.665 8.767 4.665 7.687c0-1.44 3.504-2.49 6.453-2.669M2.037 11.68a5.265 5.265 0 0 1 1.048-3.164c.27 1.547 2.522 2.881 5.972 3.37V12c0 3.772.879 6.203 2.087 6.97c-5.107-.321-9.107-3.48-9.107-7.29m10.823 7.29c1.207-.767 2.087-3.198 2.087-6.97v-.115c3.447-.488 5.704-1.826 5.972-3.37a5.26 5.26 0 0 1 1.049 3.165c-.004 3.81-4.008 6.969-9.109 7.29z"/></svg>
+                                <span class="text-center" style="margin-bottom: 5px; font-size: 20px;">Toyota</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2" style="padding-left: 10px; padding-right: 10px;">
+                        <div class="card nav-car nav-car-honda" onclick="filterDaftarMobil('car-honda');">
+                            <div class="card-body p-0 d-flex" style="flex-direction: column;">
+                                <svg style="margin-top: 5px; margin-left: auto; margin-right: auto;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M23.902 6.87c-.33-3.218-2.47-3.895-4.354-4.204c-.946-.16-2.63-.3-3.716-.34c-.946-.06-3.168-.09-3.835-.09c-.657 0-2.89.03-3.835.09c-1.076.04-2.77.18-3.716.34C2.563 2.985.42 3.66.092 6.87c-.08.877-.1 2.023-.09 3.248c.03 2.031.2 3.406.3 4.363c.07.657.338 2.62.687 3.636c.478 1.395.916 1.803 1.424 2.222c.937.757 2.471.996 2.79 1.056c1.733.31 5.24.368 6.784.368c1.544 0 5.05-.05 6.784-.368c.329-.06 1.863-.29 2.79-1.056c.508-.419.946-.827 1.424-2.222c.35-1.016.628-2.979.698-3.636c.1-.957.279-2.332.299-4.363c.04-1.225.01-2.371-.08-3.248m-1.176 5.4c-.19 2.57-.418 4.104-.747 5.22c-.29.976-.637 1.623-1.165 2.092c-.867.787-2.063.956-2.76 1.056c-1.514.23-4.055.3-6.057.3c-2.002 0-4.543-.08-6.057-.3c-.697-.1-1.893-.269-2.76-1.056c-.518-.469-.876-1.126-1.155-2.093c-.329-1.105-.558-2.65-.747-5.22c-.11-1.543-.09-4.054.08-5.4c.258-2.011 1.255-3.018 3.387-3.396c.996-.18 2.34-.31 3.606-.37c1.016-.07 2.7-.1 3.636-.09c.936-.01 2.62.03 3.636.09c1.275.06 2.61.19 3.606.37c2.142.378 3.139 1.395 3.388 3.397c.199 1.345.229 3.856.11 5.4m-5.202-8.39c-.548 2.462-.767 3.588-1.216 5.37c-.428 1.715-.767 3.298-1.335 4.065c-.587.777-1.365.947-1.893 1.006c-.279.03-.478.04-1.066.05a8.23 8.23 0 0 1-1.075-.05c-.528-.06-1.315-.229-1.892-1.006c-.578-.767-.907-2.35-1.335-4.064c-.47-1.773-.678-2.91-1.236-5.37c0 0-.548.02-.797.04c-.329.02-.588.05-.867.09c.343 5.372.692 11.079 1.126 16.13a21.983 21.983 0 0 0 2.39.169c.33-1.266.748-3.02 1.207-3.767c.378-.608.966-.677 1.295-.717c.518-.07.956-.08 1.165-.08c.2-.01.637 0 1.165.08c.33.05.917.11 1.295.717c.47.747.877 2.5 1.206 3.766c0 0 .358-.01 1.165-.05c.41-.018.82-.058 1.226-.12c.458-5.39.785-10.728 1.126-16.128c-.28-.04-.538-.07-.867-.09c-.23-.02-.787-.04-.787-.04z"/></svg>
+                                <span class="text-center" style="margin-bottom: 5px; font-size: 20px;">Honda</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2" style="padding-left: 10px; padding-right: 10px;">
+                        <div class="card nav-car nav-car-nissan" onclick="filterDaftarMobil('car-nissan');">
+                            <div class="card-body p-0 d-flex" style="flex-direction: column;">
+                                <svg style="margin-top: 5px; margin-left: auto; margin-right: auto;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="m20.576 14.955l-.01.028c-1.247 3.643-4.685 6.086-8.561 6.086c-3.876 0-7.32-2.448-8.562-6.09l-.01-.029H.71v.329l1.133.133c.7.08.847.39 1.038.78l.048.096c1.638 3.495 5.204 5.752 9.08 5.752c3.877 0 7.443-2.257 9.081-5.747l.048-.095c.19-.39.338-.7 1.038-.781l1.134-.134v-.328zM3.443 9.012c1.247-3.643 4.686-6.09 8.562-6.09c3.876 0 7.319 2.447 8.562 6.09l.01.028h2.728v-.328l-1.134-.133c-.7-.081-.847-.39-1.038-.781l-.047-.096C19.448 4.217 15.88 1.96 12.005 1.96c-3.881 0-7.443 2.257-9.081 5.752l-.048.095c-.19.39-.338.7-1.038.781l-1.133.133v.329h2.724zm13.862 1.586l-1.743 2.795h.752l.31-.5h2.033l.31.5h.747l-1.743-2.795zm1.033 1.766h-1.395l.7-1.124zm2.81-1.066l2.071 2.095H24v-2.795h-.614v2.085l-2.062-2.085h-.795v2.795h.619zM0 13.393h.619v-2.095l2.076 2.095h.781v-2.795h-.619v2.085L.795 10.598H0zm4.843-2.795h.619v2.795h-.62zm4.486 2.204c-.02.005-.096.005-.124.005H6.743v.572h2.5c.019 0 .167 0 .195-.005c.51-.048.743-.472.743-.843c0-.381-.243-.79-.705-.833c-.09-.01-.166-.01-.2-.01H7.643a.83.83 0 0 1-.181-.014c-.129-.034-.176-.148-.176-.243c0-.086.047-.2.18-.238a.68.68 0 0 1 .172-.014h2.357v-.562H7.6c-.1 0-.176.004-.238.014a.792.792 0 0 0-.695.805c0 .343.214.743.685.81c.086.009.205.009.258.009H9.2c.029 0 .1 0 .114.005c.181.023.243.157.243.276a.262.262 0 0 1-.228.266m4.657 0c-.02.005-.096.005-.129.005H11.4v.572h2.5c.019 0 .167 0 .195-.005c.51-.048.743-.472.743-.843c0-.381-.243-.79-.705-.833c-.09-.01-.166-.01-.2-.01H12.3a.83.83 0 0 1-.181-.014c-.129-.034-.176-.148-.176-.243c0-.086.047-.2.18-.238a.68.68 0 0 1 .172-.014h2.357v-.562h-2.395c-.1 0-.176.004-.238.014a.792.792 0 0 0-.695.805c0 .343.214.743.686.81c.085.009.204.009.257.009h1.59c.029 0 .1 0 .114.005c.181.023.243.157.243.276a.267.267 0 0 1-.228.266"/></svg>
+                                <span class="text-center" style="margin-bottom: 5px; font-size: 20px;">Nissan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2" style="padding-left: 10px; padding-right: 10px;">
+                        <div class="card nav-car nav-car-mitsubishi" onclick="filterDaftarMobil('car-mitsubishi');">
+                            <div class="card-body p-0 d-flex" style="flex-direction: column;">
+                                <svg style="margin-top: 5px; margin-left: auto; margin-right: auto;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M8 22.38H0l4-6.92h8zm8 0h8l-4-6.92h-8zm0-13.84l-4-6.92l-4 6.92l4 6.92Z"/></svg>
+                                <span class="text-center" style="margin-bottom: 5px; font-size: 20px;">Mitsubishi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2" style="padding-left: 10px; padding-right: 10px;">
+                        <div class="card nav-car nav-car-suzuki" onclick="filterDaftarMobil('car-suzuki');">
+                            <div class="card-body p-0 d-flex" style="flex-direction: column;">
+                                <svg style="margin-top: 5px; margin-left: auto; margin-right: auto;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M17.369 19.995C13.51 22.39 12 24 12 24L.105 15.705s5.003-3.715 9.186-.87l5.61 3.882l.683-.453L.106 7.321s2.226-.65 6.524-3.315C10.49 1.609 12 0 12 0l11.895 8.296s-5.003 3.715-9.187.87L9.1 5.281l-.683.454L23.893 16.68s-2.224.649-6.524 3.315"/></svg>
+                                <span class="text-center" style="margin-bottom: 5px; font-size: 20px;">Suzuki</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2" style="padding-left: 10px; padding-right: 0px;">
+                        <div class="card nav-car nav-car-mazda" onclick="filterDaftarMobil('car-mazda');">
+                            <div class="card-body p-0 d-flex" style="flex-direction: column;">
+                                <svg style="margin-top: 5px; margin-left: auto; margin-right: auto;" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M11.999 12.876c-.036 0-.105-.046-.222-.26a7.531 7.531 0 0 0-1.975-2.353A8.255 8.255 0 0 0 7.7 9.065a17.945 17.945 0 0 0-.345-.136c-1.012-.4-2.061-.813-3.035-1.377a8.982 8.982 0 0 1-.32-.19c.194-.34.42-.665.67-.962a6.055 6.055 0 0 1 1.253-1.131a7.126 7.126 0 0 1 1.618-.806c1.218-.434 2.677-.647 4.458-.649c1.783.002 3.241.215 4.459.65a7.097 7.097 0 0 1 1.619.805a6.08 6.08 0 0 1 1.253 1.13c.25.298.475.623.67.963c-.103.064-.212.129-.32.192c-.976.564-2.023.977-3.037 1.376l-.345.136a8.26 8.26 0 0 0-2.1 1.198a7.519 7.519 0 0 0-1.975 2.354c-.117.213-.187.259-.224.259m0 7.072c-1.544-.002-2.798-.129-3.83-.387c-1.013-.252-1.855-.64-2.576-1.188a5.792 5.792 0 0 1-1.392-1.537a7.607 7.607 0 0 1-.81-1.768a10.298 10.298 0 0 1-.467-2.983c0-.674.047-1.313.135-1.901c1.106.596 2.153.895 3.08 1.16l.215.06c1.29.371 2.314.857 3.135 1.488c.475.368.89.793 1.23 1.264c.369.508.663 1.088.877 1.725c.096.289.2.468.403.468c.207 0 .308-.18.405-.468a6.124 6.124 0 0 1 2.107-2.988c.82-.632 1.845-1.118 3.135-1.489l.216-.06c.926-.265 1.973-.564 3.078-1.16c.09.589.136 1.227.136 1.9c0 .458-.046 1.664-.465 2.984a7.626 7.626 0 0 1-.809 1.768a5.789 5.789 0 0 1-1.396 1.537c-.723.548-1.565.936-2.574 1.188c-1.035.258-2.288.385-3.833.387m9.692-14.556c-1.909-2.05-4.99-2.99-9.692-2.995c-4.7.005-7.781.944-9.69 2.994C.89 6.913 0 9.018 0 11.874c0 1.579.39 5.6 3.564 7.676c1.9 1.242 4.354 2.046 8.435 2.052c4.083-.006 6.536-.81 8.437-2.052C23.609 17.474 24 13.452 24 11.874c0-2.848-.897-4.968-2.31-6.483Z"/></svg>
+                                <span class="text-center" style="margin-bottom: 5px; font-size: 20px;">Mazda</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="row daftar-mobil" style="margin-top: 20px; margin-left: auto; margin-right: auto;">
+                <div class="col-lg-4 col-md-6 car car-toyota" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(0);">
+                        <img src="img/mobil-1/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">Fortuner GR Sport | 2022</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">5.000 Km | Automatic</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 550.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-toyota" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(1);">
+                        <img src="img/mobil-2/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">Innova G Luxury 2.0 | 2012</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">140.000 Km | Automatic</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 157.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-nissan" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(2);">
+                        <img src="img/mobil-3/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">March 1.2 | 2017</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">60.000 Km | Manual</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 105.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-honda" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(3);">
+                        <img src="img/mobil-4/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">CRV Prestige Sensing | 
+                                2021</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">14.000 Km | Automatic</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 530.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-toyota" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(4);">
+                        <img src="img/mobil-5/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">Venturer 2.4 | 2021</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">40.000 Km | Automatic</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 448.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-honda" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(5);">
+                        <img src="img/mobil-6/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">Mobilio RS CVT | 2016</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">100.000 Km | Manual</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 165.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-honda" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(6);">
+                        <img src="img/mobil-7/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">Accord VTI-L | 2014</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">50.000 Km | Automatic</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 265.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-mitsubishi" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(7);">
+                        <img src="img/mobil-8/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">XPander Ultimate | 2019</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">50.000 Km | Automatic</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text text-accent fw-bold" style="font-size: 16px; text-align: end; margin-top: auto;">Rp. 228.000.000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 car car-honda" style="padding-left: 10px; padding-right: 10px; padding-bottom: 25px;">
+                    <div class="card" style="height: 400px;" onclick="pilihMobil(8);">
+                        <img src="img/mobil-9/1.jpg" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
+                        <div class="card-body" style="display: flex; flex-direction: column;">
+                            <h5 class="card-title" style="font-weight: normal; font-size: 20px;">HRV E CVT | 2015</h5>
+                            <span class="card-text" style="font-size: 16px; color: #666666;">80.000 Km | Automatic</span>
+                            <span class="card-text text-accent" style="font-size: 16px;">Pajak ON</span>
+                            <span class="card-text fw-bold" style="font-size: 16px; color: #A20000; text-align: end; text-decoration: line-through; margin-top: auto;">SOLD OUT</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div id="load-more" class="card card-shadow button-accent" style="width: 250px; margin-left: auto; margin-right: auto; margin-top: 25px;">
+                Load More
+            </div>
+            <div id="data-kosong" class="text-accent" style="display: none; font-size: 20px; text-align: center; margin-top: 50px; margin-left: auto; margin-right: auto;">
+                Mobil yang Anda Cari Belum Tersedia
+            </div>
+        </main>
+        <footer class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="img/logo.png" width="223px">
+                    <p class="mb-0" style="margin-top: 8px;">
+                        Jual Beli Mobil Second Cash & Kredit <br/>
+                        JL. JENDRAL SUDIRMAN NO 399 <br/>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="float-start float-md-end mb-0 text-start text-md-center mt-3 mt-md-0" style="height: 100%; display: flex; align-items: flex-end;">
+                        <span class="text-accent-light" style="font-size: 25px;">
+                            Kunjungi Media Kami
+                            <br/>
+                            <a class="logo-ig" href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="2 2 20 20"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>
+                            <a class="logo-wa" href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64px" height="64px" viewBox="2 2 20 20"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.188 8.188 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18c.21-.58.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/></svg>
+                            </a>
+                            <a class="logo-tiktok" href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="52px" height="64px" viewBox="4.3 2 16 20"><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+<!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="js/berkah-motor.js"></script>
+    </body>
+</html>
